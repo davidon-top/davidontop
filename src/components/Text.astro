@@ -1,0 +1,11 @@
+---
+const {class: classname} = Astro.props;
+let classmod = "max-w-[800px] mx-auto text-justify p-5 "
+if (classname) {
+	classmod = classmod.concat(classname)
+}
+---
+
+<div class={classmod}>
+	<slot />
+</div>

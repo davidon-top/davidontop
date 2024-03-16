@@ -1,0 +1,9 @@
+---
+const {class: classname} = Astro.props;
+let classmod = "font-bold text-4xl text-center "
+if (classname) {
+	classmod = classmod.concat(classname)
+}
+---
+
+<h1 class={classmod}><slot /></h1>

@@ -1,0 +1,31 @@
+---
+import Nav from "../components/Nav.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en" class="text-white bg-bckg">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/img/logo-notext-transparent.png" />
+		<ViewTransitions />
+		<title>DavidOnTop</title>
+	</head>
+	<body class="text-white bg-bckg">
+		<nav transition:persist></nav>
+			<Nav></Nav>
+		</nav>
+		<main class="mt-12"><slot /></main>
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: "MonaspiceNe NF";
+		src: url("/fonts/MonaspiceNeNerdFont-Regular.otf") format("truetype");
+	}
+
+	html body {
+		font-family: "MonaspiceNe NF";
+	}
+</style>

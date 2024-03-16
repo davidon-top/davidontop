@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
+---
+
+<Layout>
+	<Text class="pt-12">
+		<Heading>About me</Heading>
+		My name is David.
+		I live in Middle Europe.
+		I am 18 years old.
+		I like programming, gaming, maths, and the number  (I know 32 decimal digits of .).
+		I am a working student at <a class="text-accent underline" href="https://softwareag.com">Software<sup>AG</sup></a>.
+		I have been using Linux since around 2017/2018.
+		I have been a hobby developer since around 2018/2019.
+
+		<br /><br />
+		Programing languages i know relativly well:
+		<ul class="pl-10">
+			<li class="tooltip tooltip-left" data-tip="The only functional language with a big enaugh ecosystem for me."> F# (Currently using the most)</li><br />
+			<li class="tooltip tooltip-left" data-tip="Complexity, foundation drama, realization that i don't need the performance and mainly compile times made me go to f#."> Rust</li><br />
+			<li class="tooltip tooltip-left" data-tip="Please no."> TypeScript/JavaScript</li><br />
+			<li class="tooltip tooltip-left" data-tip="Minecraft modding."> Java</li><br />
+		</ul><br />
+		Programing languages i have used in the past or ones that i know a bit:
+		<ul class="pl-10">
+			<li class="tooltip tooltip-left" data-tip="Linux shell."> Zsh/Bash</li><br />
+			<li class="tooltip tooltip-left" data-tip="Too complex. What the fuck is a virtual constructor."> C++</li><br />
+			<li class="tooltip tooltip-left" data-tip="Better java."> Kotlin</li><br />
+			<li class="tooltip tooltip-left" data-tip="Java with better ecosystem and tooling. (Aspecialy if your on windows which im not.)"> C#</li><br />
+			<li class="tooltip tooltip-left" data-tip="I don't need a language thats just for servers. Almost every language has ok server libraries."> Go</li><br />
+			<li class="tooltip tooltip-left" data-tip="Neovim config."> Lua</li><br />
+			<li class="tooltip tooltip-left" data-tip="The best language there is imo. Just shitty ecosystem and tooling."> Nim</li><br />
+			<li class="tooltip tooltip-left" data-tip="C replacement. I just wish it could interop with c++ as seamlesly as with c."> Zig</li><br />
+			<li class="tooltip tooltip-left" data-tip="The first programing language i learned."> Python</li><br />
+		</ul><br />
+		You can hover over some language to see my opinion of it/why i use it.
+	</Text>
+</Layout>

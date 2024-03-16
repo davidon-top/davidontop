@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="fixed inset-x-0 inset-y-0 mx-auto my-auto flex justify-center items-center">
+		<div>
+			<p class="text-2xl font-bold">Hello there, I'm David.</p>
+			<div class="flex justify-around items-center text-4xl pr-3">
+				<a href="mailto:me@davidon.top" class="p-3 tooltip tooltip-bottom" data-tip="me@davidon.top"> </a>
+				<a href="https://l.davidon.top/pubkey" class="p-3 tooltip tooltip-bottom" data-tip="GPG pubkey">󰌾 </a>
+				<a id="discord-btn" class="p-3 tooltip tooltip-bottom" data-tip="davidon_top">󰙯 </a>
+				<a href="https://srht.davidon.top" class="p-3 tooltip tooltip-bottom" data-tip="Sourcehut instance"> </a>
+				<a href="https://github.com/davidon-top" class="p-3 tooltip tooltip-bottom" data-tip="Github"> </a>
+			</div>
+		</div>
+	</div>
+
+	<dialog id="discord-modal" class="modal">
+		<div class="modal-box">
+			<form method="dialog">
+				<button class="btn btn-circle btn-ghost absolute right-2 top-2">✕</button>
+			</form>
+			<input readonly id="discord-inp" type="text" value="davidon_top" class="input">
+		</div>
+	</dialog>
+</Layout>
+
+<script>
+document.getElementById("discord-btn").onclick = function () {
+	document.getElementById("discord-modal").showModal();
+	let inp = document.getElementById("discord-inp")!;
+	inp.focus();
+	inp.select();
+	document.execCommand("copy");
+}
+</script>
