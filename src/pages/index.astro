@@ -28,8 +28,9 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
 document.getElementById("discord-btn").onclick = function () {
-	document.getElementById("discord-modal").showModal();
-	let inp = document.getElementById("discord-inp")!;
+	const modal: any = document.getElementById("discord-modal")
+	modal.showModal();
+	let inp: any = document.getElementById("discord-inp")!;
 	inp.focus();
 	inp.select();
 	document.execCommand("copy");
