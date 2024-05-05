@@ -27,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script>
-document.getElementById("discord-btn").onclick = function () {
+function discordOnClick () {
 	const modal: any = document.getElementById("discord-modal")
 	modal.showModal();
 	let inp: any = document.getElementById("discord-inp")!;
@@ -35,4 +35,10 @@ document.getElementById("discord-btn").onclick = function () {
 	inp.select();
 	document.execCommand("copy");
 }
+document.onload = function () {
+	document.getElementById("discord-btn").onclick = discordOnClick;
+}
+document.addEventListener("astro:page-load", function () {
+	document.getElementById("discord-btn").onclick = discordOnClick;
+})
 </script>
