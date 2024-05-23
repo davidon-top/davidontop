@@ -18,6 +18,9 @@ export default {
 				bckg2l: "#3d3d3d",
 			}
 		},
+		fontFamily: {
+			"icons": ["Symbols Nerd Font"]
+		}
 	},
 	daisyui: {
 		themes: [
