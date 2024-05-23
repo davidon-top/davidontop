@@ -1,0 +1,8 @@
+---
+const {class: classname, href: href, nt: nt} = Astro.props;
+let classmod = "font-bold text-yellow-500 "
+if (classname) {
+	classmod = classmod.concat(classname)
+}
+---
+{nt ? <a class={classmod} href={href} target="_blank" rel="noreferrer noopener"><slot /></a> : <a class={classmod} href={href}><slot /></a>}
